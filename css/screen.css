@@ -1,0 +1,87 @@
+/*
+	Reset
+*/
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
+body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+img { border:0; }
+fieldset { margin: 0; padding: 0; border: 0; }
+input, select, textarea { font-size: 100%; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+th { text-align: left; }
+a:focus { overflow: hidden; }
+
+
+/*
+	General
+*/
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	background: #FFF;
+}
+
+#container {
+	width: 400px;
+	margin: 150px auto 0;
+}
+
+/*
+	Tooltip
+*/
+
+#buttonHolder {
+	position: relative;
+}
+
+	#button a,
+	#button a:visited {
+		display: block;
+		width: 200px;
+		height: 40px;
+		background: #1284cc;
+		border: 1px solid #0e6ca7;
+		color: #FFF;
+		font-family: Arial, sans-serif;
+		font-size: 15px;
+		font-weight: 400;
+		text-decoration: none;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	#button a:hover,
+	#button a:active,
+	#button a:focus {
+		border-color: #0d6094;
+		background: #0e6ca7;
+	}
+
+#tooltip {
+	position: absolute;
+	top: -6px;
+	left: -280px;
+	width: 160px;
+	padding: 20px;
+	background: #000;
+	background: rgba(0,0,0,0.8);
+	color: #FFF;
+	display: none;
+}
+
+#tooltip:before {
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: -16px;
+	width: 0;
+	height: 0;
+	border: 8px solid rgba(0,0,0,0);
+	border-left: 8px solid rgba(0,0,0,0.8);
+}
+
+	#tooltip p {
+		padding: 0;
+	}
